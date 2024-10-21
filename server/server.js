@@ -48,6 +48,36 @@ app.post('/check-code',cors(corsOptions) , (req, res) => {
   }
 });
 
+app.post('/check-room', cors(corsOptions), (req, res) => {
+  const { roomName, code } = req.body;
+
+  if (!roomName || !code) {
+    return res.status(400).json({ message: "Room name and code are required" });
+  }
+
+  try {
+    // Prepare the query to check if the room exists
+    const statement = db.prepare(`
+      SELECT room_name 
+      FROM rooms 
+      WHERE id = (SELECT room_id FROM qr_codes WHERE code = ?)
+    `);
+
+    // Execute the query synchronously and get the result
+    const result = statement.get(code);
+
+    if (result && result.room_name === roomName) {
+      return res.json({ valid: true });
+    } else {
+      return res.json({ valid: false });
+    }
+  } catch (error) {
+    console.error(error);
+    return res.status(500).json({ message: "An error occurred while checking the room" });
+  }
+});
+
+
 // Start the server on port 3000
 const PORT =  3000;
 app.listen(PORT, () => {
