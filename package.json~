@@ -7,6 +7,6 @@
   },
   "type": "module",
   "scripts": {
-    "run": "node server/server.js --experimental-sqlite"
+    "run": "node server/server.js"
   }
 }

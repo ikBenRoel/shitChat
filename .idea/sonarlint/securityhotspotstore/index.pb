@@ -22,3 +22,5 @@ I
 server/cicd.yaml,e\7\e70442affeebf65799a087aeed773fe5985fb0be
 K
 .github/workflows/cicd.yaml,1\a\1a5b5569b1b5cb4cc9acd0ed6669e2634ac3dca1
+A
+package-lock.json,f\a\fa288d1472d29beccb489a676f68739ad365fc47
