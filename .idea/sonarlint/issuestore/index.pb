@@ -14,3 +14,11 @@ Q
 !node_modules/qrcode/lib/server.js,7\1\713f4cdb90d9b72855464e8c350c9ce2ae817a54
 Q
 !node_modules/prompt-sync/index.js,d\e\deab743281e6892e29a67e8266354c293191db6c
+I
+server/usernameOptions.js,7\f\7f3122edee553b4962862c06004f547f1c23b53c
+?
+server/utils.js,5\e\5e9cbef50fa01473d12b228c6b99e031531fb613
+@
+server/cicd.yaml,e\7\e70442affeebf65799a087aeed773fe5985fb0be
+K
+.github/workflows/cicd.yaml,1\a\1a5b5569b1b5cb4cc9acd0ed6669e2634ac3dca1

@@ -134,7 +134,7 @@ app.post("/get-messages", (req, res) => {
 
     const combinedData = [...messagesResult.map((message) => ({ ...message, type: "message" })), ...reviewsResult.map((review) => ({ ...review, type: "review", review: { toiletRating: review.toilet_rating, shitRating: review.shit_rating, time: review.time, isGoldenDrop: review.is_golden_drop } }))];
 
-    combinedData.sort((a, b) => new Date(a.timestamp) - new Date(b.timestamp));
+    combinedData.sort((a, b) => new Date(b.timestamp) - new Date(a.timestamp));
     console.log(combinedData);
     return res.json({ messages: combinedData });
   } catch (error) {

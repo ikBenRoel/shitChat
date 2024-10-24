@@ -1,9 +1,9 @@
 import readline from "node:readline";
-import {DatabaseSync} from "node:sqlite";
 import QRCode from "qrcode";
+import { DatabaseSync } from "node:sqlite";
 
 function validateRoomName(roomName) {
-  const forbiddenChars = ["(", ")", "-", "&", "@", "*", "$", "|", "%", "~"];
+  const forbiddenChars = ['<', '>', '(', ')', '{', '}', '[', ']', '=', '+', '-', '*', '/', '\\', '|', '&', '^', '@', '%', '$', '#', '!', '~', '`', '?', ':', ';', '"', "'", ',', '.', ' '];
   return !forbiddenChars.some(char => roomName.includes(char));
 }
 
