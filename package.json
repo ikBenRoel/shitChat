@@ -8,6 +8,7 @@
   },
   "type": "module",
   "scripts": {
-    "build": "node --experimental-sqlite server/server.js "
+    "build": "node --experimental-sqlite server/server.js ",
+    "start": "node --experimental-sqlite server/server.js"
   }
 }
