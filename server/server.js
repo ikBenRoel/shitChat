@@ -16,7 +16,7 @@ const corsOptions = {
 app.use(cors(corsOptions));
 
 // Connect to the SQLite database
-const db = new DatabaseSync("../database/shitChatDB.sqlite");
+const db = new DatabaseSync("C:\\Users\\roelb\\WebstormProjects\\shitchat-serevr\\database\\shitChatDB.sqlite");
 
 // Route to check if a QR code corresponds to a room
 app.post("/check-code", (req, res) => {
